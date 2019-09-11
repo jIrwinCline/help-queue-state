@@ -2,16 +2,15 @@ import React from 'react';
 import Ticket from './Ticket';
 import PropTypes from 'prop-types';
 
-function TicketList(props) {
-  console.log(props.ticketList);
-  return(
+function TicketList(props){
+  return (
     <div>
       <hr/>
       {props.ticketList.map((ticket) =>
         <Ticket names={ticket.names}
           location={ticket.location}
           issue={ticket.issue}
-          timeOpen={ticket.timeOpen}
+          formattedWaitTime={ticket.formattedWaitTime}
           key={ticket.id}/>
       )}
     </div>
